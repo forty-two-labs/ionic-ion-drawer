@@ -141,6 +141,9 @@ angular.module('ionic.contrib.drawer', ['ionic'])
     ionic.requestAnimationFrame(function() {
       if(side === LEFT) {
         el.style.transform = el.style.webkitTransform = 'translate3d(-100%, 0, 0)';
+        $element
+          .removeClass('opened')
+          .addClass('closed');
       } else {
         el.style.transform = el.style.webkitTransform = 'translate3d(100%, 0, 0)';
       }
@@ -153,6 +156,9 @@ angular.module('ionic.contrib.drawer', ['ionic'])
     ionic.requestAnimationFrame(function() {
       if(side === LEFT) {
         el.style.transform = el.style.webkitTransform = 'translate3d(0%, 0, 0)';
+        $element
+          .removeClass('closed')
+          .addClass('opened');
       } else {
         el.style.transform = el.style.webkitTransform = 'translate3d(0%, 0, 0)';
       }
