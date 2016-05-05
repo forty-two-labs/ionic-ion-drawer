@@ -15,8 +15,16 @@ drawer.animate {
 drawer.left {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
+}
+
+drawer.opened {
   box-shadow: 1px 0px 10px rgba(0,0,0,0.3);
 }
+
+drawer.closed {
+  box-shadow: none;
+}
+
 drawer.right {
   right: 0;
   top: 0;
