@@ -108,7 +108,7 @@ angular.module('ionic.contrib.drawer', ['ionic'])
           startTargetDrag(e);
         } else if(startX < edgeX) {
           startDrag(e);
-        } 
+        }
       }
     } else {
       console.log(lastX, offsetX, lastX - offsetX);
@@ -147,6 +147,9 @@ angular.module('ionic.contrib.drawer', ['ionic'])
       } else {
         el.style.transform = el.style.webkitTransform = 'translate3d(100%, 0, 0)';
       }
+      if ($attr.targetOverlayId) {
+        $('#' + $attr.targetOverlayId)[0].style.zIndex = 0;
+      }      
     });
   };
 
@@ -161,6 +164,9 @@ angular.module('ionic.contrib.drawer', ['ionic'])
           .addClass('opened');
       } else {
         el.style.transform = el.style.webkitTransform = 'translate3d(0%, 0, 0)';
+      }
+      if ($attr.targetOverlayId) {
+        $('#' + $attr.targetOverlayId)[0].style.zIndex = 10000;
       }
     });
   };
