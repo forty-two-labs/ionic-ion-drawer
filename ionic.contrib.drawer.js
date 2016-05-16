@@ -82,9 +82,15 @@ angular.module('ionic.contrib.drawer', ['ionic'])
       if(newX < (-width / 2)) {
         el.style.transform = el.style.webkitTransform = 'translate3d(' + -width + 'px, 0, 0)';
         STATE = 'close';
+        if ($attr.targetOverlayId) {
+          $('#' + $attr.targetOverlayId)[0].style.zIndex = 0;
+        }
       } else {
         el.style.transform = el.style.webkitTransform = 'translate3d(0px, 0, 0)';
         STATE = 'open';
+        if ($attr.targetOverlayId) {
+          $('#' + $attr.targetOverlayId)[0].style.zIndex = 10000;
+        }
       }
     });
   };
