@@ -133,12 +133,12 @@ angular.module('ionic.contrib.drawer', ['ionic'])
   side = $attr.side == 'left' ? LEFT : RIGHT;
   console.log(side);
 
-  $ionicGesture.on('drag', function(e) {
-    doDrag(e);
-  }, $document);
-  $ionicGesture.on('dragend', function(e) {
-    doEndDrag(e);
-  }, $document);
+  // $ionicGesture.on('drag', function(e) {
+  //   doDrag(e);
+  // }, $document);
+  // $ionicGesture.on('dragend', function(e) {
+  //   doEndDrag(e);
+  // }, $document);
 
 
   this.close = function() {
